@@ -19,7 +19,6 @@ This is the official repository of the paper  ["UVFace: Utility Driven Video-bas
     - [1.3 Results](#13-results)
   - [2. Setup](#2-setup)
     - [2.1 Environment](#21-environment)
-- [TODO UPDATE THE DEPENDENCIES](#todo-update-the-dependencies)
     - [2.2 Training](#22-training)
     - [2.3 Inference](#23-inference)
     - [2.4 Pretrained Weights for Inference](#24-pretrained-weights-for-inference)
@@ -30,7 +29,7 @@ This is the official repository of the paper  ["UVFace: Utility Driven Video-bas
 
 ### 1.1 Abstract
 
-Face recognition methods are primarily designed for single-image analysis, even though video-based recognition has seen a dramatic increase in popularity in edge security and surveillance applications. Typically, a video template is constructed from the features of individual frames. Feature norms are commonly used as weights in the construction process, as they correlate well with the usefulness of samples for recognition. Classical training approaches directly optimize only the angular distances, in turn also guiding the feature norms. This can lead to suboptimal alignment between feature norms and the usefulness (utility) of samples, resulting in subpar video performance. Motivated by this insight, we propose the UVFace methodology, which presents an extended feature norm alignment branch. Through careful design of the quality ranking step, which produces feature norm labels and a new feature norm loss, UVFace improves performance over the reproduced AdaFace baseline on video-oriented benchmarks while retaining strong image-based performance. %the method enables models to achieve state-of-the-art performance on video-based benchmarks. 
+Face recognition methods are primarily designed for single-image analysis, even though video-based recognition has seen a dramatic increase in popularity in edge security and surveillance applications. Typically, a video template is constructed from the features of individual frames. Feature norms are commonly used as weights in the construction process, as they correlate well with the usefulness of samples for recognition. Classical training approaches directly optimize only the angular distances, in turn also guiding the feature norms. This can lead to suboptimal alignment between feature norms and the usefulness (utility) of samples, resulting in subpar video performance. Motivated by this insight, we propose the UVFace methodology, which presents an extended feature norm alignment branch. Through careful design of the quality ranking step, which produces feature norm labels and a new feature norm loss, UVFace improves performance over the reproduced AdaFace baseline on video-oriented benchmarks while retaining strong image-based performance.  
 
 ### 1.2 Methodology
 
@@ -41,15 +40,15 @@ __Overview of UVFace.__ Standard face recognition training extracts a feature ve
 
 ### 1.3 Results
 
-    Face recognition experimental results on small- and large-scale benchmarks. We show the performance of state-of-the-art techniques using verification accuracy (small-scale) and TAR@FAR=$1e^{-4}$ (large-scale). The best results for each benchmark and training dataset are highlighted. For the published results, all tied best results are marked.
+Face recognition experimental results on small- and large-scale benchmarks. We show the performance of state-of-the-art techniques using verification accuracy (small-scale) and TAR@FAR=$1e^{-4}$ (large-scale). The best results for each benchmark and training dataset are highlighted. For the published results, all tied best results are marked.
 
 ![Results Base.](figures/results_recognition.png "Results")
 
-    Face recognition experimental results on the video-based DroneSURF benchmark. We show the performance of the models using the Rank-N metric. The best results for each benchmark and training dataset are highlighted.
+Face recognition experimental results on the video-based DroneSURF benchmark. We show the performance of the models using the Rank-N metric. The best results for each benchmark and training dataset are highlighted.
 
 ![Results Tiny.](figures/results_dronesurf.png "Results")
 
-    Quality assessment experimental results. On the left, we show the ranking of images along with their saliency maps, and on the right, the EDC curves measuring the FNMR@FMR=$1e^{-3}$. Our technique (in blue) has its Area Under the Curve filled, for easier comparison.
+Quality assessment experimental results. On the left, we show the ranking of images along with their saliency maps, and on the right, the EDC curves measuring the FNMR@FMR=$1e^{-3}$. Our technique (in blue) has its Area Under the Curve filled, for easier comparison.
 
 ![Results Extended.](figures/results_quality.png "Results")
 
@@ -75,7 +74,6 @@ We suggest using [conda](https://www.anaconda.com/docs/getting-started/miniconda
   pip install -r requirements.txt
 ```
 
-# TODO UPDATE THE DEPENDENCIES
 - Python dependencies used by the repository:
   - `accelerate`
   - `braceexpand`
