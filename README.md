@@ -35,12 +35,12 @@ Face recognition methods are primarily designed for single-image analysis, even 
 
 ![Methodology figure.](figures/overview.png "Methodology")
 
-__Overview of UVFace.__ Standard face recognition training extracts a feature vector $z_x$ of sample $x$ using a backbone $FR$ model. Then, using an angular margin function and the softmax loss $\mathcal{L}_{rec}$, the loss value is calculated. UVFace introduces a new branch and, consequently, a new loss term. In the second branch, an auxiliary $FIQA$ technique first extracts the quality score $q_x$, used for generation of a target feature norm $\|\hat{z}_x\|$, using the \textit{Quality Ranking} step. The label is then used by the new feature norm $\mathcal{L}_{norm}$ loss term, which, in combination with the softmax term, forms the final loss value.
+__Overview of UVFace.__ Standard face recognition training extracts a feature vector $z_x$ of sample $x$ using a backbone $FR$ model. Then, using an angular margin function and the softmax loss ${L}_{rec}$, the loss value is calculated. UVFace introduces a new branch and, consequently, a new loss term. In the second branch, an auxiliary $FIQA$ technique first extracts the quality score $q_x$, used for generation of a target feature norm ||$z_x$|| , using the Quality Ranking step. The label is then used by the new feature norm $L_{norm}$ loss term, which, in combination with the softmax term, forms the final loss value.
 
 
 ### 1.3 Results
 
-Face recognition experimental results on small- and large-scale benchmarks. We show the performance of state-of-the-art techniques using verification accuracy (small-scale) and TAR@FAR=$1e^{-4}$ (large-scale). The best results for each benchmark and training dataset are highlighted. For the published results, all tied best results are marked.
+Face recognition experimental results on small- and large-scale benchmarks. We show the performance of state-of-the-art techniques using verification accuracy (small-scale) and TAR@FAR= $1e^{-4}$ (large-scale). The best results for each benchmark and training dataset are highlighted. For the published results, all tied best results are marked.
 
 ![Results Base.](figures/results_recognition.png "Results")
 
@@ -48,7 +48,7 @@ Face recognition experimental results on the video-based DroneSURF benchmark. We
 
 ![Results Tiny.](figures/results_dronesurf.png "Results")
 
-Quality assessment experimental results. On the left, we show the ranking of images along with their saliency maps, and on the right, the EDC curves measuring the FNMR@FMR=$1e^{-3}$. Our technique (in blue) has its Area Under the Curve filled, for easier comparison.
+Quality assessment experimental results. On the left, we show the ranking of images along with their saliency maps, and on the right, the EDC curves measuring the FNMR@FMR= $1e^{-3}$. Our technique (in blue) has its Area Under the Curve filled, for easier comparison.
 
 ![Results Extended.](figures/results_quality.png "Results")
 
